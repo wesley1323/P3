@@ -1,15 +1,19 @@
 import { Component, OnInit } from '@angular/core';
+import { WesleyListService } from '../wesley-list.service';
 
 @Component({
   selector: 'app-wesley-list',
   templateUrl: './wesley-list.component.html',
-  styleUrls: ['./wesley-list.component.css']
+  styleUrls: ['./wesley-list.component.css'],
 })
 export class WesleyListComponent implements OnInit {
-
-  constructor() { }
+  constructor(public feriados: WesleyListService) {}
 
   ngOnInit() {
+    this.feriados.get();
   }
 
+  getFeriados() {
+    return this.feriados.feriados;
+  }
 }
