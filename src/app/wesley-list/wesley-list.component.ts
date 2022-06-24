@@ -10,7 +10,7 @@ export class WesleyListComponent implements OnInit {
   constructor(public feriados: WesleyListService) {}
 
   ngOnInit() {
-    this.feriados.get();
+    
   }
 
   getFeriados() {

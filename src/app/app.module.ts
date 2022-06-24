@@ -9,6 +9,7 @@ import { WesleyHomeComponent } from './wesley-home/wesley-home.component';
 import { WesleyListComponent } from './wesley-list/wesley-list.component';
 import { WesleyListService } from './wesley-list.service';
 import { RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   imports: [
@@ -18,6 +19,7 @@ import { RouterModule } from '@angular/router';
       { path: '', component: WesleyHomeComponent },
       { path: 'feriados', component: WesleyListComponent },
     ]),
+    HttpClientModule,
   ],
   declarations: [
     AppComponent,
