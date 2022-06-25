@@ -1,1 +1,8 @@
 <h2>Feriados</h2>
+<ul *ngFor="let feriado of this.feriados.feriados; index as i">
+  <li><b>Nome do Feriado:</b> {{ feriado.name }}</li>
+  <li><b>Data:</b> {{ feriado.date }}</li>
+  <li>
+    <b>Esta data comemorativa é global?</b> {{ feriado.global ? 'Sim' : 'Não' }}
+  </li>
+</ul>

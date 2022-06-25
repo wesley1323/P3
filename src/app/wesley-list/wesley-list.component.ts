@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { WesleyListService } from '../wesley-list.service';
 
@@ -7,13 +8,13 @@ import { WesleyListService } from '../wesley-list.service';
   styleUrls: ['./wesley-list.component.css'],
 })
 export class WesleyListComponent implements OnInit {
-  constructor(public feriados: WesleyListService) {}
+  constructor(public feriados: WesleyListService, private http: HttpClient) {}
 
   ngOnInit() {
-    
+    this.getFeriados();
   }
 
   getFeriados() {
-    return this.feriados.feriados;
+    this.feriados.get();
   }
 }
